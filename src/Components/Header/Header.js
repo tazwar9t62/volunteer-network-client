@@ -1,18 +1,10 @@
 import React from "react";
-import {
-  Button,
-  Container,
-  FormControl,
-  InputGroup,
-  Jumbotron,
-  Nav,
-  Navbar,
-} from "react-bootstrap";
+import { Button, Nav, Navbar } from "react-bootstrap";
 
 const Header = () => {
   return (
     <>
-      <Navbar collapseOnSelect expand="lg" variant="dark">
+      <Navbar searchBar="true" collapseOnSelect expand="lg" variant="dark">
         <Navbar.Brand href="#home">
           <img
             className="img-fluid w-25"
@@ -51,23 +43,6 @@ const Header = () => {
           </Nav>
         </Navbar.Collapse>
       </Navbar>
-      <Jumbotron fluid style={{background:"transparent"}}>
-        <Container>
-          <h1 className="text-uppercase text-center">
-            I grow by helping people in need
-          </h1>
-          <InputGroup className="mb-3">
-            <FormControl
-              placeholder="Search..."
-              aria-label="Recipient's username"
-              aria-describedby="basic-addon2"
-            />
-            <InputGroup.Append>
-              <Button variant="primary">Search</Button>
-            </InputGroup.Append>
-          </InputGroup>
-        </Container>
-      </Jumbotron>
     </>
   );
 };

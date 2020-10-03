@@ -1,13 +1,28 @@
 import React from "react";
-import logo from "./logo.svg";
 import "./App.css";
 import Home from "./Pages/Home";
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import Error404 from "./Components/Error404/Error404";
+import Register from "./Pages/Register";
 
 function App() {
   return (
-    <div className="App">
-      <Home />
-    </div>
+    <Router>
+      <Switch>
+        <Route path="/register/:taskID">
+          <Register />
+        </Route>
+        <Route path="/home">
+          <Home></Home>
+        </Route>
+        <Route exact path="/">
+          <Home></Home>
+        </Route>
+        <Route path="*">
+          <Error404 />
+        </Route>
+      </Switch>
+    </Router>
   );
 }
 
