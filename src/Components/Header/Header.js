@@ -1,9 +1,17 @@
 import React from "react";
-import { Button, Nav, Navbar } from "react-bootstrap";
+import {
+  Button,
+  Container,
+  FormControl,
+  InputGroup,
+  Jumbotron,
+  Nav,
+  Navbar,
+} from "react-bootstrap";
 
 const Header = () => {
   return (
-    <div>
+    <>
       <Navbar collapseOnSelect expand="lg" variant="dark">
         <Navbar.Brand href="#home">
           <img
@@ -36,12 +44,31 @@ const Header = () => {
               </Button>
             </Nav.Link>
             <Nav.Link eventKey={2} href="#memes">
-              <Button className="btn btn-lg" variant="dark">Admin</Button>
+              <Button className="btn btn-lg" variant="dark">
+                Admin
+              </Button>
             </Nav.Link>
           </Nav>
         </Navbar.Collapse>
       </Navbar>
-    </div>
+      <Jumbotron fluid style={{background:"transparent"}}>
+        <Container>
+          <h1 className="text-uppercase text-center">
+            I grow by helping people in need
+          </h1>
+          <InputGroup className="mb-3">
+            <FormControl
+              placeholder="Search..."
+              aria-label="Recipient's username"
+              aria-describedby="basic-addon2"
+            />
+            <InputGroup.Append>
+              <Button variant="primary">Search</Button>
+            </InputGroup.Append>
+          </InputGroup>
+        </Container>
+      </Jumbotron>
+    </>
   );
 };
 
