@@ -5,7 +5,7 @@ const Header = () => {
   return (
     <>
       <Navbar searchBar="true" collapseOnSelect expand="lg" variant="dark">
-        <Navbar.Brand href="#home">
+        <Navbar.Brand href="/home">
           <img
             className="img-fluid w-25"
             src="https://i.ibb.co/zR4wpY3/Group-1329.png"
