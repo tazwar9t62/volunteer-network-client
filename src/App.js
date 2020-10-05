@@ -4,16 +4,24 @@ import Home from "./Pages/Home";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import Error404 from "./Components/Error404/Error404";
 import Register from "./Pages/Register";
+import Login from "./Components/Login/Login";
+import PrivateRoute from "./Components/PrivateRoute/PrivateRoute";
 export const UserContext = createContext();
 
 function App() {
-  const [user, setUser] = useState({ name: "", email: "" });
+  const [loggedInUser, setLoggedInUser] = useState({});
+  const [volunteer, setVolunteer] = useState([]);
   return (
-    <UserContext.Provider value={[user, setUser]}>
+    <UserContext.Provider
+      value={{ loggedInUser, setLoggedInUser, volunteer, setVolunteer }}
+    >
       <Router>
         <Switch>
-          <Route path="/register/:name">
+          <PrivateRoute path="/register/:name">
             <Register />
+          </PrivateRoute>
+          <Route path="/login">
+            <Login />
           </Route>
           <Route path="/home">
             <Home></Home>

@@ -15,8 +15,12 @@ const Register = () => {
   return (
     <div>
       <Header />
-      <div className="text-center w-25">
-        <img src="https://i.ibb.co/zR4wpY3/Group-1329.png" alt="logo" />
+      <div style={{ textAlign: "center" }}>
+        <img
+          style={{ width: "300px" }}
+          src="https://i.ibb.co/zR4wpY3/Group-1329.png"
+          alt=""
+        />
       </div>
 
       <div className="d-flex justify-content-center">
