@@ -19,7 +19,7 @@ const Register = () => {
     const description = document.getElementById("description").value;
     const title = document.getElementById("title").value;
     const total = { name, email, date, description, title };
-    fetch("http://localhost:5000/addRegistration", {
+    fetch("https://young-bayou-15947.herokuapp.com/addRegistration", {
       method: "POST",
       headers: { "Content-type": "application/json" },
       body: JSON.stringify(total),
@@ -38,7 +38,7 @@ const Register = () => {
         />
       </div>
 
-      <div className="col-md-4 justify-content-center rounded shadow ">
+      <div className="col-md-4 text-center rounded shadow ">
         <Form onSubmit={handleSubmit}>
           <Form.Group controlId="formBasicText">
             <Form.Label>Full Name</Form.Label>
