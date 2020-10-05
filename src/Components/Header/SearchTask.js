@@ -19,7 +19,7 @@ const SearchTask = () => {
           <h1 className="text-uppercase text-center">
             I grow by helping people in need
           </h1>
-          <InputGroup className="mb-3 w-50">
+          <InputGroup className="mb-3">
             <FormControl
               className="col-xs-4"
               placeholder="Search..."

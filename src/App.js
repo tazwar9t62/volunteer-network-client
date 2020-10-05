@@ -6,6 +6,7 @@ import Error404 from "./Components/Error404/Error404";
 import Register from "./Pages/Register";
 import Login from "./Components/Login/Login";
 import PrivateRoute from "./Components/PrivateRoute/PrivateRoute";
+import Admin from "./Pages/Admin";
 export const UserContext = createContext();
 
 function App() {
@@ -23,6 +24,9 @@ function App() {
           <Route path="/login">
             <Login />
           </Route>
+          <PrivateRoute path="/adminPannel">
+            <Admin />
+          </PrivateRoute>
           <Route path="/home">
             <Home></Home>
           </Route>

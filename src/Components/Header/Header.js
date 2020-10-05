@@ -1,5 +1,6 @@
 import React from "react";
 import { Button, Nav, Navbar } from "react-bootstrap";
+import { Link } from "react-router-dom";
 
 const Header = () => {
   return (
@@ -36,9 +37,11 @@ const Header = () => {
               </Button>
             </Nav.Link>
             <Nav.Link eventKey={2} href="#memes">
-              <Button className="btn btn-lg" variant="dark">
-                Admin
-              </Button>
+              <Link to="/adminPannel">
+                <Button className="btn btn-lg" variant="dark">
+                  Admin
+                </Button>
+              </Link>
             </Nav.Link>
           </Nav>
         </Navbar.Collapse>
